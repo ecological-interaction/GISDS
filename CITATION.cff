@@ -7,5 +7,5 @@ authors:
     given-names: Jonathan
     affiliation: Ecological Interaction
     orcid: "https://orcid.org/0000-0001-8152-1796"
-repository-code: "https://github.com/Jonathan-Minchin/GISDS"
-abstract: "Work in Progress — Academic Research Resource. A curated catalogue of GIS, cartography and Earth-observation resources, access routes, interpretation limits and proposed dataset-level metadata. Provider descriptions are not end-to-end validation of every platform. Repository public accessibility remains unverified. No licence has been selected for this repository or its research documentation; public accessibility and citation metadata do not grant reuse permissions. Third-party resources retain their own reuse conditions."
+repository-code: "https://github.com/ecological-interaction/GISDS"
+abstract: "Work in Progress — Academic Research Resource. A curated catalogue of GIS, cartography and Earth-observation resources, access routes, interpretation limits and proposed dataset-level metadata. Provider descriptions are not end-to-end validation of every platform. No licence has been selected for this repository or its research documentation; public accessibility and citation metadata do not grant reuse permissions. Third-party resources retain their own reuse conditions."

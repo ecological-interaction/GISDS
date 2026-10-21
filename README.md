@@ -96,13 +96,12 @@ Keep source IDs and filenames stable. Retain attribution and provenance, and dis
 
 ## Publication preparation
 
-The configured Git remote is
-[Jonathan-Minchin/GISDS](https://github.com/Jonathan-Minchin/GISDS).
-On 21 October 2026, both this location and the potential organisation location
-`ecological-interaction/GISDS` returned HTTP 404 to anonymous requests. Public
-access and ownership transfer are therefore unverified; the remote has not
-been changed. Author affiliation with Ecological Interaction does not imply
-that the organisation owns or publicly hosts this repository.
+The repository is maintained in the Ecological Interaction GitHub organisation
+at [ecological-interaction/GISDS](https://github.com/ecological-interaction/GISDS).
+The transfer is complete, the Git remote points to this location, and anonymous
+Git access has confirmed that the repository is publicly accessible.
+Public accessibility does not grant reuse permissions; no licence has been
+selected for the repository or its research documentation.
 
 The proposed academic reading interface is `/information/GISDS/` on the
 Ecological Interaction website. It is not integrated or published by this
