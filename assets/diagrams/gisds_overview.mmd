@@ -1,0 +1,45 @@
+%% Authoritative diagram source; fixed-layout hints are consumed by render_gisds_overview.py.
+%% @canvas 1200 1030
+%% @title GISDS — source catalogue and dataset use
+%% @description GISDS contains 25 catalogue resources with IDs RS001–RS025, not 25 completed dataset records. Selected existing examples include satellite imagery, land-cover products, water resources, airborne and terrain products, computation and map presentation. These examples are not a new taxonomy. Dataset use requires separate product, date, resolution, CRS, processing and licence metadata and interpretation limits.
+%% @box TITLE 40 24 1120 80 heading
+%% @box CATALOGUE 40 140 1120 100 sources
+%% @group EXAMPLES 40 280 1120 420 sources
+%% @box SATELLITE 65 366 525 84 card
+%% @box LANDCOVER 610 366 525 84 card
+%% @box WATER 65 474 525 84 card
+%% @box AIRBORNE 610 474 525 84 card
+%% @box COMPUTATION 65 582 525 84 card
+%% @box MAPS 610 582 525 84 card
+%% @box DATASET 40 750 1120 100 neutral
+%% @box USE 40 894 1120 70 output
+%% @note 600 1006 Resources are not completed dataset records; distinguish observations, models and rendered imagery.
+flowchart TB
+    TITLE["GISDS — GIS and Remote Sensing Database Sources"]
+    CATALOGUE["GISDS.md · 25 resources · RS001–RS025<br/>ID · Resource · Information available · Coverage<br/>Accessibility · Example use · Reuse / limitations"]
+    subgraph EXAMPLES["Selected examples from the existing catalogue<br/>Illustrative resources, not new classes or domain assignments"]
+        SATELLITE["RS001 · Copernicus Browser<br/>RS002 · USGS EarthExplorer"]
+        LANDCOVER["RS005 · ESA WorldCover<br/>RS006 · Dynamic World"]
+        WATER["RS013 · Global Surface Water<br/>RS014 · GloFAS / Global Flood Monitoring"]
+        AIRBORNE["RS021 · ICGC viewers and downloads<br/>RS025 · CNIG / IGN Download Centre"]
+        COMPUTATION["RS020 · Google Earth Engine<br/>Geospatial computation"]
+        MAPS["RS022 · Instamaps<br/>Map presentation"]
+    end
+    DATASET["For each dataset used: create a separate dataset record<br/>Product/version · dates · resolution · CRS · processing · licence"]
+    USE["Research use: compare patterns, analyse downloaded data and communicate with attribution"]
+    TITLE --> CATALOGUE
+    CATALOGUE --> EXAMPLES
+    EXAMPLES --> DATASET
+    DATASET --> USE
+    classDef heading fill:#cce3f9,stroke:#173b6b,color:#15243d;
+    classDef knowledge fill:#e1f0e6,stroke:#41744d,color:#203d29;
+    classDef method fill:#e1daf0,stroke:#574087,color:#29223e;
+    classDef sources fill:#feeec9,stroke:#a16a16,color:#543a13;
+    classDef card fill:#fef6e3,stroke:#a16a16,color:#302b20;
+    classDef output fill:#eaedf1,stroke:#7c8c9d,color:#25334a;
+    classDef neutral fill:#f8f9fa,stroke:#99a4b0,color:#3a4656;
+    class TITLE heading;
+    class CATALOGUE,EXAMPLES sources;
+    class SATELLITE,LANDCOVER,WATER,AIRBORNE,COMPUTATION,MAPS card;
+    class DATASET neutral;
+    class USE output;

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1030" viewBox="0 0 1200 1030" role="img" aria-labelledby="title description">
+<title id="title">GISDS — source catalogue and dataset use</title>
+<desc id="description">GISDS contains 25 catalogue resources with IDs RS001–RS025, not 25 completed dataset records. Selected existing examples include satellite imagery, land-cover products, water resources, airborne and terrain products, computation and map presentation. These examples are not a new taxonomy. Dataset use requires separate product, date, resolution, CRS, processing and licence metadata and interpretation limits.</desc>
+<!-- Derived from gisds_overview.mmd; SHA-256 e85ff5d4bb07fbfa7e002e09cc6debb4e23f7365348dffc6259ba5dde7db463e. Do not edit this SVG directly. -->
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#637286"/></marker></defs>
+<rect width="1200" height="1030" fill="#ffffff"/>
+<g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+<path d="M 600 108 L 600 135" fill="none" stroke="#637286" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 600 244 L 600 275" fill="none" stroke="#637286" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 600 704 L 600 745" fill="none" stroke="#637286" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 600 854 L 600 889" fill="none" stroke="#637286" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="40" y="24" width="1120" height="80" rx="14" fill="#cce3f9" stroke="#173b6b" stroke-width="1.5"/>
+<text x="600" y="73.1" font-size="26" font-weight="600" fill="#15243d">GISDS — GIS and Remote Sensing Database Sources</text>
+<rect x="40" y="140" width="1120" height="100" rx="14" fill="#feeec9" stroke="#a16a16" stroke-width="1.5"/>
+<text x="600" y="170.7" font-size="22" font-weight="600" fill="#543a13">GISDS.md · 25 resources · RS001–RS025</text>
+<text x="600" y="197.7" font-size="22" font-weight="400" fill="#543a13">ID · Resource · Information available · Coverage</text>
+<text x="600" y="224.7" font-size="22" font-weight="400" fill="#543a13">Accessibility · Example use · Reuse / limitations</text>
+<rect x="40" y="280" width="1120" height="420" rx="14" fill="#feeec9" stroke="#a16a16" stroke-width="1.5"/>
+<text x="600" y="316" font-size="22" font-weight="600" fill="#543a13">Selected examples from the existing catalogue</text>
+<text x="600" y="343" font-size="22" font-weight="400" fill="#543a13">Illustrative resources, not new classes or domain assignments</text>
+<rect x="65" y="366" width="525" height="84" rx="14" fill="#fef6e3" stroke="#a16a16" stroke-width="1.5"/>
+<text x="327.5" y="402.2" font-size="22" font-weight="600" fill="#302b20">RS001 · Copernicus Browser</text>
+<text x="327.5" y="429.2" font-size="22" font-weight="400" fill="#302b20">RS002 · USGS EarthExplorer</text>
+<rect x="610" y="366" width="525" height="84" rx="14" fill="#fef6e3" stroke="#a16a16" stroke-width="1.5"/>
+<text x="872.5" y="402.2" font-size="22" font-weight="600" fill="#302b20">RS005 · ESA WorldCover</text>
+<text x="872.5" y="429.2" font-size="22" font-weight="400" fill="#302b20">RS006 · Dynamic World</text>
+<rect x="65" y="474" width="525" height="84" rx="14" fill="#fef6e3" stroke="#a16a16" stroke-width="1.5"/>
+<text x="327.5" y="510.2" font-size="22" font-weight="600" fill="#302b20">RS013 · Global Surface Water</text>
+<text x="327.5" y="537.2" font-size="22" font-weight="400" fill="#302b20">RS014 · GloFAS / Global Flood Monitoring</text>
+<rect x="610" y="474" width="525" height="84" rx="14" fill="#fef6e3" stroke="#a16a16" stroke-width="1.5"/>
+<text x="872.5" y="510.2" font-size="22" font-weight="600" fill="#302b20">RS021 · ICGC viewers and downloads</text>
+<text x="872.5" y="537.2" font-size="22" font-weight="400" fill="#302b20">RS025 · CNIG / IGN Download Centre</text>
+<rect x="65" y="582" width="525" height="84" rx="14" fill="#fef6e3" stroke="#a16a16" stroke-width="1.5"/>
+<text x="327.5" y="618.2" font-size="22" font-weight="600" fill="#302b20">RS020 · Google Earth Engine</text>
+<text x="327.5" y="645.2" font-size="22" font-weight="400" fill="#302b20">Geospatial computation</text>
+<rect x="610" y="582" width="525" height="84" rx="14" fill="#fef6e3" stroke="#a16a16" stroke-width="1.5"/>
+<text x="872.5" y="618.2" font-size="22" font-weight="600" fill="#302b20">RS022 · Instamaps</text>
+<text x="872.5" y="645.2" font-size="22" font-weight="400" fill="#302b20">Map presentation</text>
+<rect x="40" y="750" width="1120" height="100" rx="14" fill="#f8f9fa" stroke="#99a4b0" stroke-width="1.5"/>
+<text x="600" y="794.2" font-size="22" font-weight="600" fill="#3a4656">For each dataset used: create a separate dataset record</text>
+<text x="600" y="821.2" font-size="22" font-weight="400" fill="#3a4656">Product/version · dates · resolution · CRS · processing · licence</text>
+<rect x="40" y="894" width="1120" height="70" rx="14" fill="#eaedf1" stroke="#7c8c9d" stroke-width="1.5"/>
+<text x="600" y="936.7" font-size="22" font-weight="600" fill="#25334a">Research use: compare patterns, analyse downloaded data and communicate with attribution</text>
+<text x="600" y="1006" font-size="18" fill="#526174">Resources are not completed dataset records; distinguish observations, models and rendered imagery.</text>
+</g></svg>

@@ -13,3 +13,10 @@ Read README.md and GISDS.md before changing the current catalogue. Cartography_D
 - Check that all source rows have seven cells, IDs are unique, and all rows form a single table before saving.
 - Do not duplicate other projects' authoritative inventories or implement database integrations without a scoped request.
 - Do not select a licence or publish further changes without user authorisation.
+
+## Overview diagram maintenance
+
+- Keep the editable labels, relationships, palette and fixed layout in `assets/diagrams/gisds_overview.mmd`; regenerate with `python3 assets/diagrams/render_gisds_overview.py`. The renderer supports this diagram's Mermaid subset only and requires no third-party packages.
+- Maintain source and SVG together. Regenerate twice and compare output bytes; retain SVG title, description, viewBox, source checksum and README alternative text/full-size link. Never edit SVG labels independently.
+- Treat the illustration as a documented overview, not a new classification, implemented service or claim of scientific validation. Preserve all records, codes and original documentation.
+- Use repository-relative asset paths. Pinned-source website publication must separately approve, allowlist and checksum the SVG; do not run the renderer during website builds or advance publication pins as part of diagram maintenance.

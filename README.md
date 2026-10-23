@@ -1,5 +1,9 @@
 # GISDS
 
+![GISDS overview: 25 source resources, selected catalogue examples, separate dataset metadata and research use](assets/diagrams/gisds_overview.svg)
+
+*Existing catalogue examples and dataset-use guidance; no new classification or dataset records.* [View full-size diagram](assets/diagrams/gisds_overview.svg).
+
 **Work in Progress — Academic Research Resource**
 
 Research by Jonathan Minchin, Ecological Interaction.
