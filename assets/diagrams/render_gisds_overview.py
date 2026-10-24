@@ -34,21 +34,31 @@ def render():
              f'<rect width="{width}" height="{height}" fill="#ffffff"/>',
              '<g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">']
     # Edges express documented organisation; ~~~ is layout only.
-    for a, b in re.findall(r"^\s*(\w+) --> (\w+)\s*$", source, re.M):
+    for a, relationship, b in re.findall(r"^\s*(\w+) (<-->|-->) (\w+)\s*$", source, re.M):
         ax, ay, aw, ah = boxes[a]; bx, by, bw, bh = boxes[b]
         assert by > ay + ah, "Overview connectors must run downward between bands."
-        parts.append(f'<path d="M {ax+aw/2:g} {ay+ah+4} L {bx+bw/2:g} {by-5}" fill="none" stroke="#637286" stroke-width="1.6" marker-end="url(#arrow)"/>')
+        start = ' marker-start="url(#arrow)"' if relationship == "<-->" else ""
+        parts.append(f'<path d="M {ax+aw/2:g} {ay+ah+4} L {bx+bw/2:g} {by-5}" fill="none" stroke="#637286" stroke-width="1.6" marker-end="url(#arrow)"{start}/>')
     for kind, name, _, _, _, _, role in hints:
         x, y, w, h = boxes[name]; style = styles[role]
         assert 0 <= x < x+w <= width and 0 <= y < y+h <= height, name
-        parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="{style["fill"]}" stroke="{style["stroke"]}" stroke-width="{style.get("stroke-width", "1.5")}"/>')
+        dash = ' stroke-dasharray="6 4"' if name == "DRM" else ""
+        parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="{style["fill"]}" stroke="{style["stroke"]}" stroke-width="{style.get("stroke-width", "1.5")}"{dash}/>')
         lines = labels[name].split("<br/>")
         size = 26 if role == "heading" else 22
         step = 30 if role == "heading" else 27
+        if role == "federation":
+            size, step = 21, 35
+        elif role == "applicationcard":
+            size, step = 19, 24
         baseline = y + 36 if kind == "group" else y+h/2-(len(lines)-1)*step/2+size*.35
         assert baseline + (len(lines)-1)*step + size*.25 < y+h, name
         for index, line in enumerate(lines):
-            parts.append(f'<text x="{x+w/2:g}" y="{baseline+index*step:g}" font-size="{size}" font-weight="{600 if index == 0 else 400}" fill="{style["color"]}">{escape(line)}</text>')
+            line_size = (28 if index == 0 else 21) if role == "federation" else ((27 if index == 0 else 18) if role == "application" else size)
+            if index == 0 and "font-size" in style:
+                line_size = float(style["font-size"])
+            weight = style.get("font-weight", "600") if index == 0 else "400"
+            parts.append(f'<text x="{x+w/2:g}" y="{baseline+index*step:g}" font-size="{line_size}" font-weight="{weight}" fill="{style["color"]}">{escape(line)}</text>')
     for x, y, note in re.findall(r"^%% @note (\d+) (\d+) (.+)$", source, re.M):
         parts.append(f'<text x="{x}" y="{y}" font-size="18" fill="#526174">{escape(note)}</text>')
     parts.append("</g></svg>")

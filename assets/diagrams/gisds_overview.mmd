@@ -1,36 +1,42 @@
 %% Authoritative diagram source; fixed-layout hints are consumed by render_gisds_overview.py.
-%% @canvas 1200 1030
+%% @canvas 1200 1040
 %% @title GISDS — source catalogue and dataset use
-%% @description GISDS contains 25 catalogue resources with IDs RS001–RS025, not 25 completed dataset records. Selected existing examples include satellite imagery, land-cover products, water resources, airborne and terrain products, computation and map presentation. These examples are not a new taxonomy. Dataset use requires separate product, date, resolution, CRS, processing and licence metadata and interpretation limits.
+%% @description Selected existing geographic source examples connect conceptually through Database Reference Methodology to EII Inventory and emerging applications. Autonomous catalogues retain their own records; these are not implemented integrations or a new taxonomy.
 %% @box TITLE 40 24 1120 80 heading
-%% @box CATALOGUE 40 140 1120 100 sources
-%% @group EXAMPLES 40 280 1120 420 sources
-%% @box SATELLITE 65 366 525 84 card
-%% @box LANDCOVER 610 366 525 84 card
-%% @box WATER 65 474 525 84 card
-%% @box AIRBORNE 610 474 525 84 card
-%% @box COMPUTATION 65 582 525 84 card
-%% @box MAPS 610 582 525 84 card
-%% @box DATASET 40 750 1120 100 neutral
-%% @box USE 40 894 1120 70 output
-%% @note 600 1006 Resources are not completed dataset records; distinguish observations, models and rendered imagery.
+%% @group EXAMPLES 40 150 1120 420 sources
+%% @box SATELLITE 65 236 525 84 card
+%% @box LANDCOVER 610 236 525 84 card
+%% @box WATER 65 344 525 84 card
+%% @box AIRBORNE 610 344 525 84 card
+%% @box COMPUTATION 65 452 525 84 card
+%% @box MAPS 610 452 525 84 card
+%% @box DRM 40 620 1120 100 federation
+%% @group APPLICATIONS 40 770 1120 180 application
+%% @box INTELLIGENCE 60 860 255 66 applicationcard
+%% @box DECISION 335 860 255 66 applicationcard
+%% @box PLACE 610 860 255 66 applicationcard
+%% @box TECHNOLOGY 885 860 255 66 applicationcard
+%% @note 600 1000 Conceptual relationships; autonomous catalogues, not duplicated records or implemented integrations.
 flowchart TB
     TITLE["GISDS — GIS and Remote Sensing Database Sources"]
-    CATALOGUE["GISDS.md · 25 resources · RS001–RS025<br/>ID · Resource · Information available · Coverage<br/>Accessibility · Example use · Reuse / limitations"]
     subgraph EXAMPLES["Selected examples from the existing catalogue<br/>Illustrative resources, not new classes or domain assignments"]
-        SATELLITE["RS001 · Copernicus Browser<br/>RS002 · USGS EarthExplorer"]
-        LANDCOVER["RS005 · ESA WorldCover<br/>RS006 · Dynamic World"]
-        WATER["RS013 · Global Surface Water<br/>RS014 · GloFAS / Global Flood Monitoring"]
-        AIRBORNE["RS021 · ICGC viewers and downloads<br/>RS025 · CNIG / IGN Download Centre"]
-        COMPUTATION["RS020 · Google Earth Engine<br/>Geospatial computation"]
-        MAPS["RS022 · Instamaps<br/>Map presentation"]
+        SATELLITE["Copernicus Browser<br/>USGS EarthExplorer"]
+        LANDCOVER["ESA WorldCover<br/>Dynamic World"]
+        WATER["Global Surface Water<br/>GloFAS / Global Flood Monitoring"]
+        AIRBORNE["ICGC viewers and downloads<br/>CNIG / IGN Download Centre"]
+        COMPUTATION["Google Earth Engine<br/>Geospatial computation"]
+        MAPS["Instamaps<br/>Map presentation"]
     end
-    DATASET["For each dataset used: create a separate dataset record<br/>Product/version · dates · resolution · CRS · processing · licence"]
-    USE["Research use: compare patterns, analyse downloaded data and communicate with attribution"]
-    TITLE --> CATALOGUE
-    CATALOGUE --> EXAMPLES
-    EXAMPLES --> DATASET
-    DATASET --> USE
+    DRM["DRM (output) Database Reference Methodology<br/>Shared identities · Classifications and mappings · Relationships · Provenance"]
+    subgraph APPLICATIONS["Analysis, Intelligence and Applications<br/>Emerging uses — not an operational analytical platform"]
+        INTELLIGENCE["EII Indicator<br/>Inventory"]
+        DECISION["Decision-support<br/>systems"]
+        PLACE["Place-based<br/>interpretation"]
+        TECHNOLOGY["Technology and<br/>design choice"]
+    end
+    TITLE --> EXAMPLES
+    EXAMPLES <--> DRM
+    DRM <--> APPLICATIONS
     classDef heading fill:#cce3f9,stroke:#173b6b,color:#15243d;
     classDef knowledge fill:#e1f0e6,stroke:#41744d,color:#203d29;
     classDef method fill:#e1daf0,stroke:#574087,color:#29223e;
@@ -39,7 +45,13 @@ flowchart TB
     classDef output fill:#eaedf1,stroke:#7c8c9d,color:#25334a;
     classDef neutral fill:#f8f9fa,stroke:#99a4b0,color:#3a4656;
     class TITLE heading;
-    class CATALOGUE,EXAMPLES sources;
+    class EXAMPLES sources;
     class SATELLITE,LANDCOVER,WATER,AIRBORNE,COMPUTATION,MAPS card;
-    class DATASET neutral;
-    class USE output;
+    class DRM federation;
+    class APPLICATIONS application;
+    class INTELLIGENCE,DECISION,PLACE,TECHNOLOGY applicationcard;
+    class DRM developing;
+    classDef federation fill:#e1daf0,stroke:#574087,stroke-width:2,color:#29223e,font-weight:600,font-size:23.8;
+    classDef application fill:#eaedf1,stroke:#7c8c9d,stroke-width:2,color:#25334a,font-weight:600,font-size:22.95;
+    classDef applicationcard fill:#f5f6f8,stroke:#9ba8b6,stroke-width:1.2,color:#25334a;
+    classDef developing stroke-dasharray:6 4;

@@ -4,7 +4,7 @@ Read README.md and GISDS.md before changing the current catalogue. Cartography_D
 
 - GISDS is an independent catalogue repository within Ecological Information and a reference for any user. Use audience-neutral language, including “Example use”; avoid assuming a student or instructor context.
 - Keep GISDS.md limited to one continuous Markdown source table with seven columns: ID, Resource, Information available, Coverage, Accessibility, Example use, Reuse / limitations. Do not insert blank lines between source rows, including the final row.
-- Keep purpose, usage guidance, dataset metadata conventions, interpretation notes, provenance, review dates and version history in README.md. Keep maintenance instructions in AGENTS.md.
+- Keep README.md as the concise Overview; retain detailed usage guidance, dataset metadata conventions, interpretation notes, provenance, review dates and historical versions in RESEARCH_NOTES.md. Keep maintenance instructions in AGENTS.md.
 - Preserve existing source IDs, research content, academic attribution and provenance. Extend an existing provider entry when adding its viewer or product links; do not duplicate it.
 - Distinguish platforms from datasets, analytical data from rendered imagery, and observations from classifications, models and inference.
 - Verify provider documentation before changing current capabilities, access requirements or reuse conditions; record review dates and uncertainties in README.md.

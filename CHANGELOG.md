@@ -22,6 +22,10 @@ Catalogue versions are separate from research-resource releases and Git tags.
 
 ### Changed
 
+- Reduced README.md to a concise Overview with Introduction, Research Scope, Methodology and Federation, and Resource Catalogue sections. Preserved the previous detailed guidance, citations, provider-review findings and history in RESEARCH_NOTES.md; updated maintenance instructions. Catalogue records, diagram and production publication settings are unchanged.
+
+- Refined the README as the Geographic Sources Overview and sole diagram location. Simplified the reproducible SVG to four blocks: title, selected examples without record IDs, DRM output and EII Inventory. Reused the umbrella DRM palette and application-card layout; all 25 catalogue records and dataset guidance remain unchanged. Website routing is an isolated local preview pending publication approval.
+
 - Replaced internal discussion wording with neutral research-review provenance, retaining the 14 October 2026 chronology and source-edition references.
 - Clarified that public accessibility and citation metadata do not grant reuse permissions; no licence is selected for the repository or its research documentation, and third-party reuse conditions remain separate.
 
